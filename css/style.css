@@ -3,7 +3,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: hidden;
 }
 
 nav {
@@ -34,18 +33,17 @@ nav .nav__btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 5vh;
-  height: 5vh;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin: auto 10px;
 }
 
 nav .nav__btn .nav__btn__burger {
   height: 5px;
-  width: 5vh;
+  width: 35px;
   background-color: #d3d3d3;
   border-radius: 5px;
   -webkit-transition: all .5s ease-in-out;
@@ -57,7 +55,7 @@ nav .nav__btn .nav__btn__burger::before {
   content: '';
   position: absolute;
   height: 5px;
-  width: 5vh;
+  width: 35px;
   background-color: #d3d3d3;
   border-radius: 5px;
   -webkit-transition: all .5s ease-in-out;
@@ -74,20 +72,20 @@ nav .nav__btn .nav__btn__burger::before {
           transform: translateY(10px);
 }
 
-nav .nav__btn .nav__btn.open .nav__btn__burger {
+nav .nav__btn.open .nav__btn__burger {
   -webkit-transform: translateX(-50px);
           transform: translateX(-50px);
   background: transparent;
 }
 
-nav .nav__btn .nav__btn.open .nav__btn__burger::after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+nav .nav__btn.open .nav__btn__burger::after {
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+          transform: rotate(45deg) translate(35px, -35px);
 }
 
-nav .nav__btn .nav__btn.open .nav__btn__burger::before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+nav .nav__btn.open .nav__btn__burger::before {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+          transform: rotate(-45deg) translate(35px, 35px);
 }
 
 .main {
@@ -116,8 +114,8 @@ nav .nav__btn .nav__btn.open .nav__btn__burger::before {
   opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-animation: main-animation 20s infinite linear;
-          animation: main-animation 20s infinite linear;
+  -webkit-animation: main-animation 22s infinite linear;
+          animation: main-animation 22s infinite linear;
 }
 
 .main .main__img--2 {
@@ -129,8 +127,8 @@ nav .nav__btn .nav__btn.open .nav__btn__burger::before {
   opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-animation: main-animation-2 20s 10s infinite linear;
-          animation: main-animation-2 20s 10s infinite linear;
+  -webkit-animation: main-animation-2 22s 10s infinite linear;
+          animation: main-animation-2 22s 10s infinite linear;
 }
 
 .main .main__header {
@@ -201,11 +199,11 @@ nav .nav__btn .nav__btn.open .nav__btn__burger::before {
   }
   45% {
     opacity: 1;
-    right: 5%;
+    right: 4%;
   }
   50% {
     opacity: 0;
-    right: 6%;
+    right: 5%;
   }
 }
 
@@ -220,22 +218,22 @@ nav .nav__btn .nav__btn.open .nav__btn__burger::before {
   }
   45% {
     opacity: 1;
-    right: 5%;
+    right: 4%;
   }
   50% {
     opacity: 0;
-    right: 6%;
+    right: 5%;
   }
 }
 
 @-webkit-keyframes main-animation-2 {
   0% {
     opacity: 0;
-    right: 6%;
+    right: 5%;
   }
   5% {
     opacity: 1;
-    right: 5.5%;
+    right: 4.5%;
   }
   45% {
     opacity: 1;
@@ -250,11 +248,11 @@ nav .nav__btn .nav__btn.open .nav__btn__burger::before {
 @keyframes main-animation-2 {
   0% {
     opacity: 0;
-    right: 6%;
+    right: 5%;
   }
   5% {
     opacity: 1;
-    right: 5.5%;
+    right: 4.5%;
   }
   45% {
     opacity: 1;
