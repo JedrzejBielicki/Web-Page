@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 $font-color: #d3d3d3;
@@ -8,6 +10,71 @@ $font-color-gold: #F6C823;
 $font-family: 'Archivo',
 sans-serif;
 
+nav {
+    position: absolute;
+    color: $font-color;
+    font-family: $font-family;
+    font-weight: bold;
+    height: 5vh;
+    line-height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+
+    .nav__btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5vh;
+        height: 5vh;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        margin-right: 10px;
+        margin-left: 10px;
+
+        .nav__btn__burger {
+            height: 5px;
+            width: 5vh;
+            background-color: $font-color;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+        }
+
+        .nav__btn__burger::after,
+        .nav__btn__burger::before {
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 5vh;
+            background-color: $font-color;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+        }
+
+        .nav__btn__burger::after {
+            transform: translateY(-10px);
+        }
+
+        .nav__btn__burger::before {
+            transform: translateY(10px);
+        }
+
+        .nav__btn.open .nav__btn__burger {
+            transform: translateX(-50px);
+            background: transparent;
+        }
+
+        .nav__btn.open .nav__btn__burger::after {
+            transform: rotate(45deg);
+        }
+
+        .nav__btn.open .nav__btn__burger::before {
+            transform: rotate(-45deg);
+        }
+    }
+}
 
 .main {
     height: 100vh;
@@ -15,12 +82,12 @@ sans-serif;
     background: radial-gradient(41.22% 36.06% at 25.66% 51.27%, #343434 0%, #131313 100%);
     color: $font-color;
     font-family: $font-family;
+    overflow: hidden;
 
     .main__logo {
         position: absolute;
         top: 15px;
         left: 15px;
-
         width: 40px;
         height: 66px;
     }
@@ -29,8 +96,23 @@ sans-serif;
     .main__img {
         height: 100vh;
         position: absolute;
-        bottom: 0;
+        bottom: -2%;
         right: 0;
+        z-index: 1;
+        opacity: 0;
+        transition: 1s;
+        animation: main-animation 20s infinite linear;
+    }
+
+    .main__img--2 {
+        height: 100vh;
+        position: absolute;
+        bottom: -2%;
+        right: 0;
+        z-index: 1;
+        opacity: 0;
+        transition: 1s;
+        animation: main-animation-2 20s 10s infinite linear;
     }
 
     .main__header {
@@ -48,17 +130,96 @@ sans-serif;
         letter-spacing: 2px;
     }
 
-
-
-    // .main__header--second::before {
-    //     content: "";
-    //     display: block;
-    //     width: 100px;
-    //     float: left;
-    //     border-top: 5px solid white;
-    // }
-
     .header__span {
         color: $font-color-gold;
+    }
+
+    .main__line1 {
+        position: absolute;
+        width: 99.5%;
+        height: 5px;
+        background-color: $font-color;
+        bottom: 15%;
+
+    }
+
+    .main__line2 {
+        position: absolute;
+        width: 99.5%;
+        height: 5px;
+        background-color: $font-color;
+        bottom: 25%;
+
+    }
+
+    .main__line3 {
+        position: absolute;
+        width: 99.5%;
+        height: 5px;
+        background-color: $font-color;
+        bottom: 35%;
+
+    }
+
+    .main__social {
+        position: absolute;
+        bottom: 0;
+        height: 5vh;
+        width: 80%;
+        left: 10%;
+
+        a {
+            text-decoration: none;
+            color: $font-color;
+            padding-right: 10px;
+
+        }
+    }
+
+    @keyframes main-animation {
+        0% {
+            opacity: 0;
+            right: 0;
+        }
+
+        5% {
+            opacity: 1;
+            right: .5%;
+        }
+
+        45% {
+            opacity: 1;
+            right: 5%;
+        }
+
+        50% {
+            opacity: 0;
+            right: 6%;
+        }
+
+
+
+    }
+
+    @keyframes main-animation-2 {
+        0% {
+            opacity: 0;
+            right: 6%
+        }
+
+        5% {
+            opacity: 1;
+            right: 5.5%;
+        }
+
+        45% {
+            opacity: 1;
+            right: 1%;
+        }
+
+        50% {
+            opacity: 0;
+            right: 0;
+        }
     }
 }
