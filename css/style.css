@@ -1,1 +1,47 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(41.22% 36.06% at 25.66% 51.27%, #343434 0%, #131313 100%);
+  color: #d3d3d3;
+  font-family: "Archivo", sans-serif;
+}
+
+.main .main__logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+  height: 66px;
+}
+
+.main .main__img {
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.main .main__header {
+  font-size: 90px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.main .main__header--second {
+  font-size: 40px;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  letter-spacing: 2px;
+}
+
+.main .header__span {
+  color: #F6C823;
+}
+/*# sourceMappingURL=style.css.map */
