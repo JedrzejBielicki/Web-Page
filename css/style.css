@@ -248,11 +248,11 @@ nav .nav__btn.open .nav__btn__burger::before {
   }
   45% {
     opacity: 1;
-    right: 4%;
+    right: 3%;
   }
   50% {
     opacity: 0;
-    right: 5%;
+    right: 4%;
   }
 }
 
@@ -267,22 +267,22 @@ nav .nav__btn.open .nav__btn__burger::before {
   }
   45% {
     opacity: 1;
-    right: 4%;
+    right: 3%;
   }
   50% {
     opacity: 0;
-    right: 5%;
+    right: 4%;
   }
 }
 
 @-webkit-keyframes main-animation-2 {
   0% {
     opacity: 0;
-    right: 5%;
+    right: 4.5%;
   }
   5% {
     opacity: 1;
-    right: 4.5%;
+    right: 4%;
   }
   45% {
     opacity: 1;
@@ -297,11 +297,11 @@ nav .nav__btn.open .nav__btn__burger::before {
 @keyframes main-animation-2 {
   0% {
     opacity: 0;
-    right: 5%;
+    right: 4.5%;
   }
   5% {
     opacity: 1;
-    right: 4.5%;
+    right: 4%;
   }
   45% {
     opacity: 1;
@@ -313,11 +313,19 @@ nav .nav__btn.open .nav__btn__burger::before {
   }
 }
 
+.stuff--up {
+  background-color: black;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .stuff {
   height: 100vh;
   width: 100%;
   overflow: hidden;
   position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .stuff .line__container {
@@ -326,6 +334,8 @@ nav .nav__btn.open .nav__btn__burger::before {
   -webkit-transform: rotate(-45deg) translate(-800px, -800px);
           transform: rotate(-45deg) translate(-800px, -800px);
   position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .stuff .line__container .line {
@@ -355,9 +365,16 @@ nav .nav__btn.open .nav__btn__burger::before {
           transform: translateY(-75px);
 }
 
+.stuff .line__container--up {
+  -webkit-transform: rotate(0deg) translate(0px, 0px);
+          transform: rotate(0deg) translate(0px, 0px);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .stuff h2 {
   position: absolute;
-  bottom: 10%;
+  bottom: 20%;
   left: 10%;
   font-size: 3rem;
 }
