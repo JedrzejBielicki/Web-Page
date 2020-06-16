@@ -6,13 +6,13 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  font-family: "Archivo", sans-serif;
 }
 
 nav {
   position: absolute;
   color: #d3d3d3;
-  font-family: "Archivo", sans-serif;
   font-weight: bold;
   height: 5vh;
   line-height: 5vh;
@@ -92,6 +92,10 @@ nav .nav__btn.open .nav__btn__burger::before {
           transform: rotate(-45deg) translate(35px, 35px);
 }
 
+.menu {
+  display: none;
+}
+
 .menu .circle {
   height: 300vh;
   width: 300vw;
@@ -114,6 +118,9 @@ nav .nav__btn.open .nav__btn__burger::before {
   position: absolute;
   bottom: 20%;
   left: 20%;
+  font-family: "Archivo", sans-serif;
+  font-weight: bold;
+  opacity: .1;
 }
 
 .menu .circle--active {
@@ -171,11 +178,21 @@ nav .nav__btn.open .nav__btn__burger::before {
 }
 
 .main .main__header--second {
-  font-size: 40px;
+  font-size: 3rem;
   position: absolute;
   left: 10%;
   top: 50%;
   letter-spacing: 2px;
+  border-bottom: 5px solid #d3d3d3;
+}
+
+.main .main__header--second::before {
+  content: '';
+  position: absolute;
+  border-bottom: 5px solid #d3d3d3;
+  width: 300px;
+  bottom: -5px;
+  left: -300px;
 }
 
 .main .header__span {
@@ -294,5 +311,54 @@ nav .nav__btn.open .nav__btn__burger::before {
     opacity: 0;
     right: 0;
   }
+}
+
+.stuff {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.stuff .line__container {
+  height: 20vh;
+  width: 3000px;
+  -webkit-transform: rotate(-45deg) translate(-800px, -800px);
+          transform: rotate(-45deg) translate(-800px, -800px);
+  position: relative;
+}
+
+.stuff .line__container .line {
+  height: 5px;
+  width: 100%;
+  background-color: #1F1F1F;
+  position: absolute;
+  top: 50%;
+}
+
+.stuff .line__container .line::before,
+.stuff .line__container .line::after {
+  content: '';
+  height: 5px;
+  width: 100%;
+  background-color: #1F1F1F;
+  position: absolute;
+}
+
+.stuff .line__container .line::after {
+  -webkit-transform: translateY(75px);
+          transform: translateY(75px);
+}
+
+.stuff .line__container .line::before {
+  -webkit-transform: translateY(-75px);
+          transform: translateY(-75px);
+}
+
+.stuff h2 {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  font-size: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
