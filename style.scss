@@ -334,10 +334,29 @@ nav {
 
     }
 
-    h2 {
+    .stuff__header {
         position: absolute;
-        bottom: 20%;
+        bottom: 25%;
         left: 10%;
         font-size: 3rem;
+        transition: 2s;
     }
+
+    .stuff__header--up {
+        bottom: 5%;
+        opacity: 0;
+        transition: 2s;
+    }
+
+}
+
+.about {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    transition: 1s;
+}
+
+.about--up {
+    background-color: #fff;
 }

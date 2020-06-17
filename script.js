@@ -17,20 +17,37 @@ window.addEventListener("scroll", () => {
     parallax(".main__line3", window.scrollY, 1.1);
 })
 
-// window.addEventListener('resize', () => {
-//     let mainHeight = document.querySelector('.main').clientHeight;
-//     console.log(mainHeight)
-// })
+
 let mainHeight = document.querySelector('.main').clientHeight;
 const stuff = document.querySelector('.stuff');
-const lineContainer = document.querySelector('.line__container')
+let stuffHeight = stuff.clientHeight;
+console.log(stuffHeight, mainHeight, scrollY)
+const lineContainer = document.querySelector('.line__container');
+const stuffHeader = document.querySelector('.stuff__header');
+const aboutSec = document.querySelector('.about');
 document.addEventListener('scroll', () => {
 
     if (scrollY > mainHeight / 2) {
         stuff.classList.remove('stuff--up')
         lineContainer.classList.remove('line__container--up')
+
     } else {
         stuff.classList.add('stuff--up')
         lineContainer.classList.add('line__container--up')
+
+    }
+})
+document.addEventListener('scroll', () => {
+    if (scrollY > mainHeight + (stuffHeight / 2)) {
+        aboutSec.classList.remove('about--up');
+    } else {
+        aboutSec.classList.add('about--up');
+    }
+})
+document.addEventListener('scroll', () => {
+    if (scrollY > mainHeight) {
+        stuffHeader.classList.remove('stuff__header--up')
+    } else {
+        stuffHeader.classList.add('stuff__header--up')
     }
 })

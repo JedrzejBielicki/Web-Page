@@ -372,10 +372,31 @@ nav .nav__btn.open .nav__btn__burger::before {
   transition: 1s;
 }
 
-.stuff h2 {
+.stuff .stuff__header {
   position: absolute;
-  bottom: 20%;
+  bottom: 25%;
   left: 10%;
   font-size: 3rem;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.stuff .stuff__header--up {
+  bottom: 5%;
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.about {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.about--up {
+  background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
