@@ -21,27 +21,31 @@ window.addEventListener("scroll", () => {
 let mainHeight = document.querySelector('.main').clientHeight;
 const stuff = document.querySelector('.stuff');
 let stuffHeight = stuff.clientHeight;
-console.log(stuffHeight, mainHeight, scrollY)
-const lineContainer = document.querySelector('.line__container');
+const stuffLineContainer = document.querySelector('.stuff__line__container');
 const stuffHeader = document.querySelector('.stuff__header');
 const aboutSec = document.querySelector('.about');
+const aboutLineContainer = document.querySelector('.about__line__container');
+
+
 document.addEventListener('scroll', () => {
 
     if (scrollY > mainHeight / 2) {
         stuff.classList.remove('stuff--up')
-        lineContainer.classList.remove('line__container--up')
+        stuffLineContainer.classList.remove('stuff__line__container--up')
 
     } else {
         stuff.classList.add('stuff--up')
-        lineContainer.classList.add('line__container--up')
+        stuffLineContainer.classList.add('stuff__line__container--up')
 
     }
 })
 document.addEventListener('scroll', () => {
     if (scrollY > mainHeight + (stuffHeight / 2)) {
         aboutSec.classList.remove('about--up');
+        aboutLineContainer.classList.remove('about__line__container--up');
     } else {
         aboutSec.classList.add('about--up');
+        aboutLineContainer.classList.add('about__line__container--up');
     }
 })
 document.addEventListener('scroll', () => {
