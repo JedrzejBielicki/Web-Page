@@ -194,32 +194,41 @@ nav {
         color: $font-color-gold;
     }
 
-    .main__line1 {
+    .main__line--wrapper {
+        overflow-x: hidden;
         position: absolute;
-        width: 99.5%;
-        height: 5px;
-        background-color: $font-color;
-        bottom: 15%;
-        overflow: hidden;
+        bottom: 0;
+        height: 40vh;
+        width: 100%;
+
+        .main__line1 {
+            position: absolute;
+            width: 99.5%;
+            height: 5px;
+            background-color: $font-color;
+            bottom: 40%;
+            overflow: hidden;
+        }
+
+        .main__line2 {
+            position: absolute;
+            width: 99.5%;
+            height: 5px;
+            background-color: $font-color;
+            bottom: 60%;
+            overflow: hidden;
+        }
+
+        .main__line3 {
+            position: absolute;
+            width: 99.5%;
+            height: 5px;
+            background-color: $font-color;
+            bottom: 80%;
+            overflow: hidden;
+        }
     }
 
-    .main__line2 {
-        position: absolute;
-        width: 99.5%;
-        height: 5px;
-        background-color: $font-color;
-        bottom: 25%;
-        overflow: hidden;
-    }
-
-    .main__line3 {
-        position: absolute;
-        width: 99.5%;
-        height: 5px;
-        background-color: $font-color;
-        bottom: 35%;
-        overflow: hidden;
-    }
 
     .main__social {
         position: absolute;
