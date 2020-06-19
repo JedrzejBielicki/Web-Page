@@ -29,7 +29,7 @@ const aboutLineContainer = document.querySelector('.about__line__container');
 
 document.addEventListener('scroll', () => {
 
-    if (scrollY > mainHeight / 2) {
+    if (scrollY > mainHeight / 2 && scrollY < mainHeight * 1.5) {
         stuff.classList.remove('stuff--up')
         stuffLineContainer.classList.remove('stuff__line__container--up')
 
@@ -49,7 +49,7 @@ document.addEventListener('scroll', () => {
     }
 })
 document.addEventListener('scroll', () => {
-    if (scrollY > mainHeight) {
+    if (scrollY > (mainHeight / 1.2)) {
         stuffHeader.classList.remove('stuff__header--up')
     } else {
         stuffHeader.classList.add('stuff__header--up')
