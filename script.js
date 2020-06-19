@@ -1,30 +1,13 @@
-const navBtn = document.querySelector('.nav__btn');
-const menuCircle = document.querySelector('.circle');
-
-
-navBtn.addEventListener('click', () => {
-    menuCircle.classList.toggle('circle--active');
-    navBtn.classList.toggle('open');
-})
-
-function parallax(element, distance, speed) {
-    const item = document.querySelector(element);
-    item.style.transform = `translateX(${distance * speed}px)`;
-}
-document.addEventListener("scroll", () => {
-    parallax(".main__line1", window.scrollY, 1.5);
-    parallax(".main__line2", window.scrollY, 1.3);
-    parallax(".main__line3", window.scrollY, 1.1);
-})
-
-
 let mainHeight = document.querySelector('.main').clientHeight;
 const stuff = document.querySelector('.stuff');
 let stuffHeight = stuff.clientHeight;
+let aboutHeight = document.querySelector('.about').clientHeight;
+let contactHeight = document.querySelector('.contact').clientHeight;
 const stuffLineContainer = document.querySelector('.stuff__line__container');
 const stuffHeader = document.querySelector('.stuff__header');
 const aboutSec = document.querySelector('.about');
 const aboutLineContainer = document.querySelector('.about__line__container');
+const navigationNumbers = document.querySelectorAll('.navigation__item');
 
 
 document.addEventListener('scroll', () => {
@@ -54,4 +37,14 @@ document.addEventListener('scroll', () => {
     } else {
         stuffHeader.classList.add('stuff__header--up')
     }
+})
+
+
+
+document.addEventListener('scroll', () => {
+    let scrollValue = window.scrollY;
+    console.log(scrollValue, mainHeight, stuffHeight, aboutHeight, contactHeight);
+
+
+
 })

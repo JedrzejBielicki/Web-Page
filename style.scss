@@ -25,7 +25,14 @@ body {
     height: 5vh;
     justify-content: flex-end;
     align-items: center;
+    z-index: 6;
 
+    a {
+        color: $font-color;
+        font-weight: 100;
+        text-decoration: none;
+        transition: .3s;
+    }
 
     .navigation__list {
         display: flex;
@@ -35,14 +42,57 @@ body {
 
         .navigation__list__item {
             padding: 20px;
+            position: relative;
+            transition: .3s;
 
-            a {
-                color: $font-color;
-                text-decoration: none;
+            a:hover {
+                color: $font-color-gold;
+                border-bottom: 1px solid $font-color-gold;
             }
+        }
+
+
+        .navigation__list__item:nth-last-child(1) {
+            a {
+                color: $font-color-gold;
+            }
+
+        }
+
+
+
+    }
+
+
+
+}
+
+.aside-navigation {
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 6;
+
+    .navigation__item {
+        height: 7vh;
+        font-size: .7rem;
+
+        a {
+            text-decoration: none;
+            color: $font-color;
         }
     }
 
+    .navigation__item--active {
+        font-size: .8rem;
+
+        a {
+            color: $font-color-gold;
+        }
+    }
 }
 
 .main {
@@ -109,8 +159,6 @@ body {
         position: absolute;
         left: 10%;
         bottom: 25%;
-        letter-spacing: 2px;
-
     }
 
 
@@ -279,6 +327,10 @@ body {
 
 .about--up {
     background-color: #fff;
+}
+
+.contact {
+    height: 100vh;
 }
 
 @media(max-width: 768px) {
