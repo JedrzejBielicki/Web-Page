@@ -38,13 +38,3 @@ document.addEventListener('scroll', () => {
         stuffHeader.classList.add('stuff__header--up')
     }
 })
-
-
-
-document.addEventListener('scroll', () => {
-    let scrollValue = window.scrollY;
-    console.log(scrollValue, mainHeight, stuffHeight, aboutHeight, contactHeight);
-
-
-
-})

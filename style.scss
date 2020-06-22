@@ -70,29 +70,49 @@ body {
 .aside-navigation {
     position: fixed;
     right: 1rem;
+    height: 40vh;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     z-index: 6;
 
     .navigation__item {
-        height: 7vh;
-        font-size: .7rem;
+        height: 2vh;
 
-        a {
+        font-size: .7rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .links {
             text-decoration: none;
             color: $font-color;
+            transition: .5s;
+
+            span {
+                position: absolute;
+                right: 100%;
+                display: none;
+
+            }
         }
     }
 
-    .navigation__item--active {
-        font-size: .8rem;
-
-        a {
+    .navigation__item:hover {
+        .links {
             color: $font-color-gold;
+
+            span {
+                display: block;
+            }
         }
     }
+
 }
 
 .main {
