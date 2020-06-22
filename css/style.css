@@ -277,14 +277,58 @@ body {
 
 .stuff .stuff__container {
   height: 60vh;
-  width: 60vh;
+  width: 60vw;
   position: absolute;
-  left: 50%;
+  left: 35%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-box-shadow: 15px -15px 38px -6px #c9c9c9;
           box-shadow: 15px -15px 38px -6px #c9c9c9;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.stuff .stuff__container .container__a {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.stuff .stuff__container .container__a .a__img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.stuff .stuff__container .container__a .a__img--1 {
+  background-image: url(/imgs/SkateMind.jpg);
+}
+
+.stuff .stuff__container .container__a .a__img--2 {
+  background-image: url(/imgs/SpiderShop.png);
+}
+
+.stuff .stuff__container .container__a .a__img--3 {
+  background-image: url(/imgs/Alaska.jpg);
+}
+
+.stuff .stuff__container .container__a .a__img--4 {
+  background-image: url(/imgs/RGBGame.jpg);
+}
+
+.stuff .stuff__container .container__a:hover {
+  padding: 15px;
+}
+
+.stuff .stuff__container--up {
+  opacity: 0;
 }
 
 .stuff .stuff__header {
@@ -301,6 +345,10 @@ body {
   opacity: 0;
   -webkit-transition: 2s;
   transition: 2s;
+}
+
+.stuff .stuff__tech {
+  position: absolute;
 }
 
 .about {

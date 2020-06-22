@@ -269,13 +269,54 @@ body {
 
     .stuff__container {
         height: 60vh;
-        width: 60vh;
+        width: 60vw;
         position: absolute;
-        left: 50%;
+        left: 35%;
         top: 50%;
         transform: translateY(-50%);
         box-shadow: 15px -15px 38px -6px rgba(201, 201, 201, 1);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        transition: .7s;
 
+        .container__a {
+            transition: .3s;
+
+            .a__img {
+                height: 100%;
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+            }
+
+            .a__img--1 {
+                background-image: url(/imgs/SkateMind.jpg);
+            }
+
+            .a__img--2 {
+                background-image: url(/imgs/SpiderShop.png );
+            }
+
+            .a__img--3 {
+                background-image: url(/imgs/Alaska.jpg);
+            }
+
+            .a__img--4 {
+                background-image: url(/imgs/RGBGame.jpg);
+            }
+
+        }
+
+        .container__a:hover {
+
+            padding: 15px;
+        }
+
+    }
+
+    .stuff__container--up {
+        opacity: 0;
     }
 
     .stuff__header {
@@ -290,6 +331,10 @@ body {
         bottom: 0;
         opacity: 0;
         transition: 2s;
+    }
+
+    .stuff__tech {
+        position: absolute;
     }
 
 }
