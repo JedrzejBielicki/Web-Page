@@ -104,8 +104,8 @@ body {
 .aside-navigation .navigation__item .links {
   text-decoration: none;
   color: #A3A3A3;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .aside-navigation .navigation__item .links span {
@@ -273,6 +273,18 @@ body {
           transform: rotate(0deg) translate(0px, 0px);
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+.stuff .stuff__container {
+  height: 60vh;
+  width: 60vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-shadow: 15px -15px 38px -6px #c9c9c9;
+          box-shadow: 15px -15px 38px -6px #c9c9c9;
 }
 
 .stuff .stuff__header {

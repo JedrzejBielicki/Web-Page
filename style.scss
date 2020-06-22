@@ -92,7 +92,7 @@ body {
         .links {
             text-decoration: none;
             color: $font-color;
-            transition: .5s;
+            transition: .3s;
 
             span {
                 position: absolute;
@@ -264,6 +264,17 @@ body {
     .stuff__line__container--up {
         transform: rotate(0deg) translate(0px, 0px);
         transition: 1s;
+
+    }
+
+    .stuff__container {
+        height: 60vh;
+        width: 60vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 15px -15px 38px -6px rgba(201, 201, 201, 1);
 
     }
 
