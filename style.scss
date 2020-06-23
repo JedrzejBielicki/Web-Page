@@ -274,7 +274,13 @@ body {
         left: 35%;
         top: 50%;
         transform: translateY(-50%);
-        box-shadow: 15px -15px 38px -6px rgba(201, 201, 201, 1);
+        box-shadow:
+            0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -310,7 +316,7 @@ body {
 
         .container__a:hover {
 
-            padding: 15px;
+            padding: 10px;
         }
 
     }
@@ -330,11 +336,21 @@ body {
     .stuff__header--up {
         bottom: 0;
         opacity: 0;
-        transition: 2s;
     }
 
     .stuff__tech {
         position: absolute;
+        left: 10%;
+        bottom: 20%;
+        font-size: 2rem;
+        padding-right: 10px;
+        transition: 2s;
+        opacity: 1;
+    }
+
+    .stuff__tech--up {
+        bottom: -10%;
+        opacity: 0;
     }
 
 }
@@ -406,7 +422,97 @@ body {
 }
 
 .contact {
-    height: 100vh;
+    height: 50vh;
+    background-color: black;
+    position: relative;
+
+    .contact__line__container {
+        height: 20vh;
+        width: 100%;
+        position: absolute;
+        transition: 1s;
+        bottom: 0;
+        animation: line-slider 2s linear both;
+
+        .line {
+            height: 4px;
+            width: 100%;
+            background-color: $font-color;
+            position: absolute;
+            top: 50%;
+        }
+
+        .line::before,
+        .line::after {
+            content: '';
+            height: 4px;
+            width: 100%;
+            background-color: $font-color;
+            position: absolute;
+        }
+
+        .line::after {
+            transform: translate(75px, 75px);
+        }
+
+        .line::before {
+            transform: translate(-75px, -75px);
+        }
+    }
+
+    @keyframes line-slider {
+        0% {
+            transform: translateX(-150%);
+        }
+
+        100% {
+            transform: translateX(20%);
+        }
+    }
+
+    .contact__header {
+        color: $font-color;
+        position: absolute;
+        left: 10%;
+        top: 20%
+    }
+
+    .contact__header--background {
+        color: $font-color;
+        position: absolute;
+        font-size: 20rem;
+        opacity: .1;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+    .contact__header--email {
+        color: $font-color-gold;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        font-weight: 100;
+    }
+
+    .contact__social {
+        z-index: 2;
+        position: absolute;
+        left: 10%;
+        top: 28%;
+
+        i {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: $font-color;
+            padding-right: 15px;
+
+        }
+    }
 }
 
 @media(max-width: 768px) {

@@ -9,6 +9,7 @@ const aboutSec = document.querySelector('.about');
 const aboutLineContainer = document.querySelector('.about__line__container');
 const navigationNumbers = document.querySelectorAll('.navigation__item');
 const stuffContainer = document.querySelector('.stuff__container');
+const stuffTech = document.querySelector('.stuff__tech');
 
 
 document.addEventListener('scroll', () => {
@@ -37,7 +38,9 @@ document.addEventListener('scroll', () => {
 document.addEventListener('scroll', () => {
     if (scrollY > (mainHeight / 1.2)) {
         stuffHeader.classList.remove('stuff__header--up')
+        stuffTech.classList.remove('stuff__tech--up')
     } else {
         stuffHeader.classList.add('stuff__header--up')
+        stuffTech.classList.add('stuff__tech--up')
     }
 })
