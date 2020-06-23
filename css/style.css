@@ -689,6 +689,10 @@ body {
     text-align: start;
     left: 5%;
   }
+  .about .about__text-container p {
+    padding: 10px 0;
+    font-size: .9rem;
+  }
   .contact .contact__header {
     top: 15%;
   }
