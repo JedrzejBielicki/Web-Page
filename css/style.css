@@ -439,13 +439,11 @@ body {
 
 .contact .contact__line__container {
   height: 20vh;
-  width: 100%;
+  width: 110%;
   position: absolute;
   -webkit-transition: 1s;
   transition: 1s;
   bottom: 0;
-  -webkit-animation: line-slider 2s linear both;
-          animation: line-slider 2s linear both;
 }
 
 .contact .contact__line__container .line {
@@ -475,26 +473,9 @@ body {
           transform: translate(-75px, -75px);
 }
 
-@-webkit-keyframes line-slider {
-  0% {
-    -webkit-transform: translateX(-150%);
-            transform: translateX(-150%);
-  }
-  100% {
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
-  }
-}
-
-@keyframes line-slider {
-  0% {
-    -webkit-transform: translateX(-150%);
-            transform: translateX(-150%);
-  }
-  100% {
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
-  }
+.contact .contact__line__container--anim {
+  -webkit-transform: translateX(20%) rotate(-45deg);
+          transform: translateX(20%) rotate(-45deg);
 }
 
 .contact .contact__header {

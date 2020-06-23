@@ -10,6 +10,7 @@ const aboutLineContainer = document.querySelector('.about__line__container');
 const navigationNumbers = document.querySelectorAll('.navigation__item');
 const stuffContainer = document.querySelector('.stuff__container');
 const stuffTech = document.querySelector('.stuff__tech');
+const contactLineContainer = document.querySelector('.contact__line__container');
 
 
 document.addEventListener('scroll', () => {
@@ -42,5 +43,14 @@ document.addEventListener('scroll', () => {
     } else {
         stuffHeader.classList.add('stuff__header--up')
         stuffTech.classList.add('stuff__tech--up')
+    }
+})
+document.addEventListener('scroll', () => {
+
+    if (scrollY > stuffHeight + aboutHeight + (contactLineContainer.clientHeight / 2.1)) {
+
+        contactLineContainer.classList.add('contact__line__container--anim')
+    } else {
+        contactLineContainer.classList.remove('contact__line__container--anim')
     }
 })

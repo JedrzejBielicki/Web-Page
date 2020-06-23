@@ -430,11 +430,11 @@ body {
 
     .contact__line__container {
         height: 20vh;
-        width: 100%;
+        width: 110%;
         position: absolute;
         transition: 1s;
         bottom: 0;
-        animation: line-slider 2s linear both;
+
 
         .line {
             height: 4px;
@@ -462,15 +462,12 @@ body {
         }
     }
 
-    @keyframes line-slider {
-        0% {
-            transform: translateX(-150%);
-        }
-
-        100% {
-            transform: translateX(20%);
-        }
+    .contact__line__container--anim {
+        transform: translateX(20%) rotate(-45deg);
     }
+
+
+
 
     .contact__header {
         color: $font-color;
