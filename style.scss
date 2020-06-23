@@ -416,6 +416,28 @@ body {
         }
     }
 
+    .about__text-container {
+        width: 50%;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $font-color;
+        text-align: end;
+
+        h3 {
+            font-size: 2rem;
+            color: $font-color-gold
+        }
+
+        h4 {
+            font-size: 2rem;
+        }
+
+        p {
+            padding: 20px 0;
+        }
+    }
 }
 
 .about--up {
@@ -701,6 +723,13 @@ body {
         }
     }
 
+    .about {
+        .about__text-container {
+            text-align: start;
+            left: 5%;
+        }
+    }
+
     .contact {
         .contact__header {
             top: 15%;
@@ -708,6 +737,12 @@ body {
 
         .contact__header--email {
             font-size: 1.7rem;
+            z-index: 2;
+        }
+
+        .contact__header--background {
+            font-size: 10rem;
+            top: 40%;
         }
     }
 }
