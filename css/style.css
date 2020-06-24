@@ -446,8 +446,25 @@ body {
   font-size: 2rem;
 }
 
+.about .about__text-container h5 {
+  padding-top: 20px;
+  text-align: end;
+  font-size: 1.2rem;
+}
+
 .about .about__text-container p {
   padding: 20px 0;
+  font-weight: 300;
+}
+
+.about .about__text-container .text-container__item {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.about .about__text-container .text-container__item--up {
+  opacity: 0;
 }
 
 .about--up {

@@ -7,10 +7,11 @@ const stuffLineContainer = document.querySelector('.stuff__line__container');
 const stuffHeader = document.querySelector('.stuff__header');
 const aboutSec = document.querySelector('.about');
 const aboutLineContainer = document.querySelector('.about__line__container');
-const navigationNumbers = document.querySelectorAll('.navigation__item');
 const stuffContainer = document.querySelector('.stuff__container');
 const stuffTech = document.querySelector('.stuff__tech');
 const contactLineContainer = document.querySelector('.contact__line__container');
+const textContainerItemUP = document.querySelectorAll('.text-container__item');
+console.log(textContainerItemUP);
 
 
 document.addEventListener('scroll', () => {
@@ -29,11 +30,18 @@ document.addEventListener('scroll', () => {
     if (scrollY > mainHeight + (stuffHeight / 2)) {
         aboutSec.classList.remove('about--up');
         aboutLineContainer.classList.remove('about__line__container--up');
+        for (i = 0; i < textContainerItemUP.length; i++) {
+            textContainerItemUP[i].classList.remove('text-container__item--up');
+        }
+
 
     } else {
         aboutSec.classList.add('about--up');
         aboutLineContainer.classList.add('about__line__container--up');
 
+        for (i = 0; i < textContainerItemUP.length; i++) {
+            textContainerItemUP[i].classList.add('text-container__item--up');
+        }
     }
 })
 document.addEventListener('scroll', () => {

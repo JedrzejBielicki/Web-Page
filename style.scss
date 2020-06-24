@@ -434,9 +434,28 @@ body {
             font-size: 2rem;
         }
 
+        h5 {
+            padding-top: 20px;
+            text-align: end;
+            font-size: 1.2rem;
+        }
+
         p {
             padding: 20px 0;
+            font-weight: 300;
         }
+
+        .text-container__item {
+            opacity: 1;
+            transition: 1s;
+        }
+
+        .text-container__item--up {
+            opacity: 0;
+
+        }
+
+
     }
 }
 
