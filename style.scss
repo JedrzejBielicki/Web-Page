@@ -688,6 +688,13 @@ body {
 
     }
 
+    .about {
+        .about__text-container {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+
     .contact {
         .contact__header {
             font-size: 2rem;
@@ -746,6 +753,9 @@ body {
         .about__text-container {
             text-align: start;
             left: 5%;
+            width: 85%;
+
+            color: white;
 
             p {
                 padding: 10px 0;
@@ -772,10 +782,42 @@ body {
 }
 
 // mobile - vertical small
-@media(max-width: 340px) {
+@media(max-width: 361px) {
     .main {
         .main__header {
             font-size: 1.5rem;
+        }
+    }
+
+    .about {
+        .about__text-container {
+            height: 100vh;
+            width: 75%;
+            color: white;
+
+            h3 {
+                font-size: 1rem;
+
+            }
+
+            h4 {
+                font-size: 1.2rem;
+            }
+
+            h5 {
+                padding: 0;
+                text-align: start;
+
+            }
+
+            p {
+
+                font-size: .8rem;
+
+
+            }
+
+
         }
     }
 }
