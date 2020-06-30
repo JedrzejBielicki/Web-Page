@@ -22,14 +22,12 @@ body {
   font-size: 2rem;
   color: white;
   display: block;
-  font-family: 'Lobster', cursive;
+  font-family: "Roboto Slab", serif;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-animation: text-up .5s ease-out both;
-          animation: text-up .5s ease-out both;
 }
 
 .preloader .preloader__logo {
@@ -43,25 +41,31 @@ body {
   width: 37px;
 }
 
-@-webkit-keyframes text-up {
-  100% {
-    -webkit-transform: translate(-50%, -150%);
-            transform: translate(-50%, -150%);
-    opacity: 0;
-  }
-}
-
-@keyframes text-up {
-  100% {
-    -webkit-transform: translate(-50%, -150%);
-            transform: translate(-50%, -150%);
-    opacity: 0;
-  }
+.preloader .preloader__text--up {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translate(-50%, -150%);
+          transform: translate(-50%, -150%);
+  color: #F6C823;
 }
 
 .preloader--up {
-  opacity: 0;
-  pointer-events: none;
+  -webkit-animation: fade-out .5s ease-out 1s both;
+          animation: fade-out .5s ease-out 1s both;
+}
+
+@-webkit-keyframes fade-out {
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .navigation {

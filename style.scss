@@ -29,12 +29,12 @@ body {
         font-size: 2rem;
         color: white;
         display: block;
-        font-family: 'Lobster', cursive;
+        font-family: $font-family;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        animation: text-up .5s ease-out both;
+
     }
 
     .preloader__logo {
@@ -48,17 +48,29 @@ body {
         width: 37px;
     }
 
-    @keyframes text-up {
-        100% {
-            transform: translate(-50%, -150%);
-            opacity: 0;
-        }
+    .preloader__text--up {
+        transition: 1s;
+        transform: translate(-50%, -150%);
+        color: $font-color-gold;
+
+
     }
+
 }
 
 .preloader--up {
-    opacity: 0;
-    pointer-events: none;
+    animation: fade-out .5s ease-out 1s both;
+}
+
+
+
+
+
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
 }
 
 .navigation {

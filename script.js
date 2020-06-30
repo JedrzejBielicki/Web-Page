@@ -15,7 +15,9 @@ console.log(textContainerItemUP);
 
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
+    const preloaderText = document.querySelector('.preloader__text')
     preloader.classList.add('preloader--up');
+    preloaderText.classList.add('preloader__text--up');
 })
 
 document.addEventListener('scroll', () => {
