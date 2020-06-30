@@ -10,6 +10,60 @@ body {
   font-family: "Roboto Slab", serif;
 }
 
+.preloader {
+  height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  position: fixed;
+  z-index: 7;
+}
+
+.preloader .preloader__text {
+  font-size: 2rem;
+  color: white;
+  display: block;
+  font-family: 'Lobster', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: text-up .5s ease-out both;
+          animation: text-up .5s ease-out both;
+}
+
+.preloader .preloader__logo {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
+
+.preloader .preloader__logo img {
+  height: 100px;
+  width: 37px;
+}
+
+@-webkit-keyframes text-up {
+  100% {
+    -webkit-transform: translate(-50%, -150%);
+            transform: translate(-50%, -150%);
+    opacity: 0;
+  }
+}
+
+@keyframes text-up {
+  100% {
+    -webkit-transform: translate(-50%, -150%);
+            transform: translate(-50%, -150%);
+    opacity: 0;
+  }
+}
+
+.preloader--up {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .navigation {
   position: absolute;
   width: 100%;
@@ -309,7 +363,7 @@ body {
 }
 
 .stuff .stuff__container .container__a .a__img--1 {
-  background-image: url(/imgs/SkateMind.jpg);
+  background-image: url(/imgs/skatemind-small_optimized.jpg);
 }
 
 .stuff .stuff__container .container__a .a__img--2 {
@@ -317,7 +371,7 @@ body {
 }
 
 .stuff .stuff__container .container__a .a__img--3 {
-  background-image: url(/imgs/Alaska.jpg);
+  background-image: url(/imgs/alaska-small_optimized.jpg);
 }
 
 .stuff .stuff__container .container__a .a__img--4 {

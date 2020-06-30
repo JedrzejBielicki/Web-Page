@@ -13,6 +13,10 @@ const contactLineContainer = document.querySelector('.contact__line__container')
 const textContainerItemUP = document.querySelectorAll('.text-container__item');
 console.log(textContainerItemUP);
 
+window.addEventListener('load', () => {
+    const preloader = document.querySelector('.preloader');
+    preloader.classList.add('preloader--up');
+})
 
 document.addEventListener('scroll', () => {
 
