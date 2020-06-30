@@ -800,11 +800,12 @@ body {
     font-size: 1rem;
   }
   .about .about__text-container h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .about .about__text-container h5 {
     padding: 0;
     text-align: start;
+    color: #F6C823;
   }
   .about .about__text-container p {
     font-size: .8rem;
