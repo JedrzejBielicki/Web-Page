@@ -647,7 +647,7 @@ body {
 
 
 
-@media(max-width: 768px) {
+@media(max-width: 768px) and (orientation: portrait) {
     .aside-navigation {
         display: none;
     }
@@ -759,6 +759,45 @@ body {
 
 }
 
+@media(min-width: 441px) and (orientation: landscape) {
+    .main {
+        .main__header {
+            top: 40%;
+
+        }
+    }
+
+    .about {
+
+
+        .about__text-container {
+            width: 90%;
+
+            .text-container__item {
+                font-size: .6rem;
+            }
+
+
+        }
+    }
+
+    .stuff {
+        .stuff__header {
+            bottom: 2%;
+        }
+
+        .stuff__tech {
+            top: 2%;
+        }
+    }
+
+    .contact {
+        .contact__header {
+            top: 5%;
+        }
+    }
+}
+
 // mobile - vertical
 @media(max-width: 440px) {
     .aside-navigation {
@@ -781,13 +820,13 @@ body {
     .stuff {
         .stuff__container {
             top: 40%;
-            width: 70%;
-            left: 25%;
+            width: 90%;
+            left: 5%;
 
             .container__a {
                 .a__img {
 
-                    background-position: top left;
+                    background-position: center;
 
                 }
             }
