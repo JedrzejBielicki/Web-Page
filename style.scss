@@ -759,7 +759,7 @@ body {
 
 }
 
-@media(min-width: 441px) and (orientation: landscape) {
+@media(max-width: 767px) and (orientation: landscape) {
     .main {
         .main__header {
             top: 40%;
