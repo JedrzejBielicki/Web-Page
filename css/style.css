@@ -691,7 +691,7 @@ body {
     padding: 10px 0;
   }
   .main .main__social a i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .main .main__social a span {
     display: none;
@@ -768,6 +768,11 @@ body {
     position: absolute;
     left: 5%;
     bottom: 5%;
+  }
+  .main .main__logo {
+    height: 50px;
+    width: 17.5px;
+    left: 5%;
   }
   .stuff .stuff__container {
     top: 40%;
